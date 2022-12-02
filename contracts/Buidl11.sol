@@ -73,8 +73,7 @@ contract BUIDL11 {
     function getAdmin() public view returns(address){
         return owner;
     }
-   aram playerName is the name of the player
-     */
+ 
     function addPlayerToGame(string memory playerName) public {
         require(gameStatus == Status.PRE_GAME_API, "Can't add player now");
 
