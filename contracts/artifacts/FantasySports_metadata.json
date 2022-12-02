@@ -1,0 +1,285 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "teamName",
+						"type": "string"
+					}
+				],
+				"name": "addFantasyTeam",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "_playerIDs",
+						"type": "uint256[]"
+					}
+				],
+				"name": "addPlayerToFantasyTeam",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "playerName",
+						"type": "string"
+					}
+				],
+				"name": "addPlayerToGame",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "bid",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "calculateTeamsScore",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "gameBegins",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "gameStops",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getAdmin",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "listPlayers",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "playersAddedToGame",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "captainID",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "viceCaptainID",
+						"type": "uint256"
+					}
+				],
+				"name": "setCaptains",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "playerID",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "runs",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "wickets",
+						"type": "uint256"
+					}
+				],
+				"name": "setplayerStats",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "teamSize",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "runMul",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "wicketMul",
+						"type": "uint256"
+					}
+				],
+				"name": "startGame",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"addFantasyTeam(string)": {
+					"params": {
+						"teamName": "is the team name"
+					}
+				},
+				"addPlayerToGame(string)": {
+					"params": {
+						"playerName": "is the name of the player"
+					}
+				},
+				"listPlayers()": {
+					"returns": {
+						"_0": "a string containing list of all available players"
+					}
+				},
+				"setCaptains(uint256,uint256)": {
+					"params": {
+						"captainID": "is the captain id",
+						"viceCaptainID": "is the vice captain id"
+					}
+				},
+				"setplayerStats(uint256,uint256,uint256)": {
+					"params": {
+						"playerID": "is the player id",
+						"runs": "scored by the player",
+						"wickets": "taken by the player"
+					}
+				},
+				"startGame(uint256,uint256,uint256)": {
+					"params": {
+						"runMul": "is the name of the player",
+						"teamSize": "is the name of the player",
+						"wicketMul": "is the name of the player"
+					}
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"addFantasyTeam(string)": {
+					"notice": "Adds new fantasy team. Owner can own only one team"
+				},
+				"addPlayerToFantasyTeam(uint256[])": {
+					"notice": "Adds player to the fantasy team"
+				},
+				"addPlayerToGame(string)": {
+					"notice": "Organiser calls to add the players that will be playing the sport"
+				},
+				"bid()": {
+					"notice": "Owners call to bid at the game"
+				},
+				"gameBegins()": {
+					"notice": "Game begins. No one can form more fantasy team."
+				},
+				"gameStops()": {
+					"notice": "Called after receiving all the players' stats"
+				},
+				"listPlayers()": {
+					"notice": "This function is called by the users to view available players."
+				},
+				"playersAddedToGame()": {
+					"notice": "Called when all the players playing the sport is added"
+				},
+				"setCaptains(uint256,uint256)": {
+					"notice": "Sets captain and vice captain of the fantasy team"
+				},
+				"setplayerStats(uint256,uint256,uint256)": {
+					"notice": "Sets player's wickets, runs scored"
+				},
+				"startGame(uint256,uint256,uint256)": {
+					"notice": "Organiser calls this function to start the game"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Buidl11.sol": "FantasySports"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Buidl11.sol": {
+			"keccak256": "0xbe9c1311b5b7a764836ae87a0798f5f99d42f618f30d36f5fa67a5ea45c7ed28",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://9a89fd64df735dba357349e3c0ec846a41d4fc6cb78766c438ccffac22d2c2ad",
+				"dweb:/ipfs/QmZcvn7Wxpd3Ns6Xow9ij5iTHXAuarsX5vzptvLLZBPFG2"
+			]
+		}
+	},
+	"version": 1
+}
