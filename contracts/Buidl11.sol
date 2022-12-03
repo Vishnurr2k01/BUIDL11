@@ -74,13 +74,16 @@ contract BUIDL11 {
         return owner;
     }
  
-    function addPlayerToGame(string memory playerName) public {
+    function addPlayerToGame(string[] memory _playerNames) public {
         require(gameStatus == Status.PRE_GAME_API, "Can't add player now");
 
-        Player memory newPlayer;
+        for(uint i=0;i<_playerNames.length;i++){
+            string memory playerName = _playerNames[i];
+            Player memory newPlayer;
         newPlayer.name = playerName;
         newPlayer.id = players.length;
         players.push(newPlayer);
+        }
     }
 
     

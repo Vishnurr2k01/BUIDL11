@@ -39,9 +39,9 @@
 			{
 				"inputs": [
 					{
-						"internalType": "string",
-						"name": "playerName",
-						"type": "string"
+						"internalType": "string[]",
+						"name": "_playerNames",
+						"type": "string[]"
 					}
 				],
 				"name": "addPlayerToGame",
@@ -203,11 +203,11 @@
 	},
 	"sources": {
 		"contracts/Buidl11.sol": {
-			"keccak256": "0x9b1e9263b1079e96876ba2fb380a9b3b2ddc0ee61003d1b6820638b3b7f663bb",
+			"keccak256": "0x3f229e7ce982c97ef58d9bbc5a8475fee085fa1157448e5681a89ccb26490992",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://e83299b0002d8e286e887775787d44dc11ce62b88dc025c3053893a7f5ba2946",
-				"dweb:/ipfs/QmeRde8De5MP2Zp2cYU4y9Dsuv94WtrqjY1z32B6NLYRvz"
+				"bzz-raw://c17e37d9b76f83dc62287f0c905bf66d64b6272bbac6a4c9773fcee031389f6c",
+				"dweb:/ipfs/QmWXTPAj52MgLm1srVnBSfZbZYpppVZp7z3Byyxd1Ut1ug"
 			]
 		}
 	},
